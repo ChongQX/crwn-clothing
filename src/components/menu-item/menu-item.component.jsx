@@ -19,3 +19,5 @@ const MenuItem = ({ title, imageUrl, size, history, linkUrl, match }) => (
 );
 
 export default withRouter(MenuItem);
+//withRouter to gain access to eg.history props
+//not all children needs this props, so do dont pass down from homepage
