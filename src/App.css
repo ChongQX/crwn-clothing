@@ -8,3 +8,8 @@ a {
     text-decoration: none;
     color: black;
 }
+
+/* inline for all the boxes (universal) */
+* {
+    box-sizing: border-box;
+}
