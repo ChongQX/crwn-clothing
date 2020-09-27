@@ -11,7 +11,7 @@ class SignUp extends React.Component {
     constructor() {
         super();
 
-        this.setState = {
+        this.state = {
             displayName: '',
             email: '',
             password: '',
@@ -26,7 +26,7 @@ class SignUp extends React.Component {
         const { displayName, email, password, confirmPassword } = this.state;
 
         if (password !== confirmPassword) {
-            alert("passwords don't match la");
+            alert("ur passwords don't match laa");
             return;
         }
 
@@ -45,6 +45,7 @@ class SignUp extends React.Component {
                 confirmPassword: ''
             });
         } catch (error) {
+            alert(error.message);
             console.error(error);
         }
     };
