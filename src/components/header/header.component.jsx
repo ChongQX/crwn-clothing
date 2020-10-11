@@ -35,6 +35,7 @@ const Header = ({ currentUser }) => (
 )
 
 //state is root reducer here
+//setting action to use for redux
 const mapStateToProps = state => ({
     currentUser: state.user.currentUser
 });
