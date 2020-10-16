@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 
 import CustomButton from '../custom-button/custom-button.component';
 import CartItem from '../cart-item/cart-item.component';
+import { selectCartItems, selectCartItemsCount } from '../../redux/cart/cart.selectors';
+
 
 import './cart-dropdown.styles.scss';
 
@@ -19,9 +21,10 @@ const CartDropdown = ({ cartItems }) => (
     </div>
 );
 
-//to retrieve from redux -> 1. mapStateToProps and destructure
-const mapStateToProps = ({ cart: { cartItems } }) => ({
-    cartItems
+//to retrieve from redux -> 1. mapStateToProps and destructure (prev lesson)
+//memoized by cart.selectors.js (memoized)
+const mapStateToProps = (state) => ({
+    cartItems: selectCartItems(state)
 });
 
 //2. connect to redux store

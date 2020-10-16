@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import { toggleCartHidden } from '../../redux/cart/cart.actions';
+import { selectCartItemsCount } from '../../redux/cart/cart.selectors';
 
 import { ReactComponent as ShoppingIcon } from '../../assests/shopping-bag.svg';
 
@@ -19,9 +20,12 @@ const mapDispatchToProps = dispatch => ({
 });
 
 //known as selector: retrieving just a slice of info from redux store
-const mapStateToProps = ({ cart: { cartItems } }) => ({
-    itemCount: cartItems.reduce((accumulatedQuantity, cartItem) =>
-    accumulatedQuantity + cartItem.quantity, 0)
+//state = whole reducer state
+//ref to cart.selectors.js
+//ref selectCartItemsCount -> selectCartItems -> selectCart(state.cart) 
+//-> selectCartItems -> selectCartItemsCount
+const mapStateToProps = (state) => ({
+    itemCount: selectCartItemsCount(state)
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(CartIcon);
