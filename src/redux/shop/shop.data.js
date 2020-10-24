@@ -1,4 +1,3 @@
-//normalize the data by storing as object now rather than array, previously
 const SHOP_DATA = {
   hats: {
     id: 1,

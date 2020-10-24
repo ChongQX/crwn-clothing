@@ -1,7 +1,6 @@
 $sub-color: grey;
 $main-color: black;
 
-//email password shrinking effect
 @mixin shrinkLabel {
   top: -16px;
   font-size: 14px;
@@ -29,7 +28,6 @@ $main-color: black;
       outline: none;
     }
 
-//email password shrinking effect extends
     &:focus ~ .form-input-label {
       @include shrinkLabel();
     }
@@ -48,7 +46,6 @@ $main-color: black;
     left: 5px;
     top: 10px;
     transition: 300ms ease all;
-    //transition of 300ms for label to shrink
 
     &.shrink {
       @include shrinkLabel();

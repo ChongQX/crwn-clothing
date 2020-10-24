@@ -13,9 +13,6 @@ export const selectCollectionsPreview = createSelector(
     collections => Object.keys(collections).map(key => collections[key])
 );
 
-//.find() return all items that are true
-//currying => fx return fx
-//code won't recompute its value when wrapped with memoize
 export const selectCollection = memoize((collectionUrlParam) =>
     createSelector(
         [selectCollections],

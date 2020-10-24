@@ -2,7 +2,6 @@ import React from 'react';
 import StripeCheckout from 'react-stripe-checkout';
 
 
-//stripe wants payment in cents*
 const StripeCheckoutButton = ({ price }) => {
     const priceForStripe = price * 100;
     const publishableKey = 'pk_test_51HfTxCA2UkdqaBq9Zchd0j4Aogos7p14uzBTnVcf8bNC782s4csUzfO5r2ymgCc48daqseMWwTQ7YPTXjk1wXt1K00tcbjYmTm';

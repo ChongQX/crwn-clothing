@@ -44,8 +44,6 @@ const Header = ({ currentUser, hidden }) => (
     </div>
 )
 
-//state is root reducer here
-//setting action to use for redux
 const mapStateToProps = createStructuredSelector({
     currentUser: selectCurrentUser,
     hidden: selectCartHidden

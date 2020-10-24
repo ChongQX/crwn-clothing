@@ -1,4 +1,3 @@
-//for easier testing purpose to move state into redux (more reusable)
 const INITIAL_STATE = {
     sections: [
         {

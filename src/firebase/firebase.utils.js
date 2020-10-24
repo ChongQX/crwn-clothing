@@ -13,7 +13,6 @@ const config = {
     measurementId: "G-WFNQTR53RN"
   };
 
-  //async await return only when previous fetch is true
   export const createUserProfileDocument = async (userAuth, additionalData) => {
     if(!userAuth) return;
 

@@ -9,8 +9,6 @@ import MenuItem from '../menu-item/menu-item.component';
 import './directory.styles.scss';
 
 const Directory = ({ sections }) => (
-  // ({title, imageUrl, id, size, linkUrl}) same as id ...othersectionprops
-  // <MenuItem key={id} title={title} imageUrl={imageUrl} size={size}/> same as ...othersectionprops
   <div className='directory-menu'>{
     sections.map(({ id, ...otherSectionProps }) => (
       <MenuItem key={id} {...otherSectionProps} />

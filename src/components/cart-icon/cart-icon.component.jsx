@@ -20,11 +20,6 @@ const mapDispatchToProps = dispatch => ({
     toggleCartHidden: () => dispatch(toggleCartHidden())
 });
 
-//known as selector: retrieving just a slice of info from redux store
-//state = whole reducer state
-//ref to cart.selectors.js
-//ref selectCartItemsCount -> selectCartItems -> selectCart(state.cart) 
-//-> selectCartItems -> selectCartItemsCount
 const mapStateToProps = createStructuredSelector({
     itemCount: selectCartItemsCount
 });

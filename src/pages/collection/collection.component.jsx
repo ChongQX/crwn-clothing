@@ -21,9 +21,6 @@ const CollectionPage = ({ collection }) => {
     )
 };
 
-//retrieve part of the state depending on URL param
-//2nd arg ownprops -> to get props already exist in page
-//selectCollection is a fx that return fx and (state) is passed in as arg
 const mapStateToProps = (state, ownProps) => ({
     collection: selectCollection(ownProps.match.params.collectionId)(state)
 })
