@@ -20,17 +20,13 @@ class App extends React.Component {
   unsubscribeFromAuth = null;
 
   componentDidMount() {
-    //destructured for less code
     const { setCurrentUser } = this.props;
 
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
       if (userAuth) {
         const userRef = await createUserProfileDocument(userAuth);
 
-        //setState is async fx so it may not finish the call when we console log
-        //use a 2nd arg to view console log
         userRef.onSnapshot(snapShot => {
-          //previously this.props.setCurrentUser
           setCurrentUser({
             id: snapShot.id,
             ...snapShot.data()
@@ -70,7 +66,6 @@ const mapStateToProps = createStructuredSelector({
   currentUser: selectCurrentUser
 });
 
-//set user action that will go to user reducer then root reducer
 const mapDispatchToProps = dispatch => ({
   setCurrentUser: user => dispatch(setCurrentUser(user))
 });
