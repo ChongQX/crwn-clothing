@@ -8,11 +8,10 @@ import './index.css';
 import App from './App';
 
 import { store, persistor } from './redux/store';
-
-ReactDOM.render(
   //provider is a parent component to access redux store
   //persistor = persistStore(store), wrap app inside to always have persist flow
   //PersistGate will have acces to the store from provider and read state from BrowserRouter as app refreshes
+ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
       <PersistGate persistor={persistor}>
